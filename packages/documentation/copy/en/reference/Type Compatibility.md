@@ -380,12 +380,12 @@ A "<span class='black-tick'>✓</span>" indicates a combination that is compatib
 </tr>
 <tr>
 <td>never →</td>
-<td align="center"><span class="blue-tick">✓</span></td>
-<td align="center"><span class="blue-tick">✓</span></td>
-<td align="center"><span class="blue-tick">✓</span></td>
-<td align="center"><span class="blue-tick">✓</span></td>
-<td align="center"><span class="blue-tick">✓</span></td>
-<td align="center"><span class="blue-tick">✓</span></td>
+<td align="center"><span class="blue-tick">✕</span></td>
+<td align="center"><span class="blue-tick">✕</span></td>
+<td align="center"><span class="blue-tick">✕</span></td>
+<td align="center"><span class="blue-tick">✕</span></td>
+<td align="center"><span class="blue-tick">✕</span></td>
+<td align="center"><span class="blue-tick">✕</span></td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -395,9 +395,10 @@ Reiterating [The Basics](/handbook/2/basic-types.html):
 
 - Everything is assignable to itself.
 - `any` and `unknown` are the same in terms of what is assignable to them, different in that `unknown` is not assignable to anything except `any`.
-- `unknown` and `never` are like inverses of each other.
-  Everything is assignable to `unknown`, `never` is assignable to everything.
-  Nothing is assignable to `never`, `unknown` is not assignable to anything (except `any`).
+- `unknown`
+  Everything is assignable to `unknown`.`unknown` is not assignable to anything (except `any`).
+- `never`
+  Nothing is assignable to `never`,and `never` is not assignable to anything (except `any`).
 - `void` is not assignable to or from anything, with the following exceptions: `any`, `unknown`, `never`, `undefined`, and `null` (if [`strictNullChecks`](/tsconfig#strictNullChecks) is off, see table for details).
 - When [`strictNullChecks`](/tsconfig#strictNullChecks) is off, `null` and `undefined` are similar to `never`: assignable to most types, most types are not assignable to them.
   They are assignable to each other.
